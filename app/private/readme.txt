@@ -1,0 +1,1 @@
+The script will generate spotify access token in this directory

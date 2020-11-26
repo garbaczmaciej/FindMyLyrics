@@ -1,0 +1,5 @@
+.idea
+**/__pycache__/
+*.pyc
+**/spotify_access_key.json
+private_config.bat

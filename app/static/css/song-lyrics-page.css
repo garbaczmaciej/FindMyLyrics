@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+html{
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Ubuntu', sans-serif;}
+
+body{
+	margin: 0;
+	background: url(background-pattern.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+
+	text-align: center;
+}
+
+.big-section{
+	display: inline-block;
+
+	height: 78vh;
+	width: max(90%, 320px);
+
+	margin-top: 30px;
+	margin-bottom: 10px;
+	padding: 0;
+
+
+	background: white;
+	box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+
+	transition: 0.3s;
+}
+
+.information-section{
+	margin-top: 20vh;
+}
+.information-section-icon{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	height: 100px;
+}
+.loading-circle{
+
+	border: 3px solid rgba(0,0,0,0.3);
+	border-top-color: #ffff;
+	border-radius: 50%;
+
+	animation: 1s loading-circle-spin infinite ease-in-out;
+}
+@keyframes loading-circle-spin {
+	to{
+		transform: rotate(360deg);
+	}
+}
+.information-text{
+	color: #5e5e5e;
+}
+
+.song-section{
+	display: grid;
+	grid-template-columns: 40% 60%;
+
+	opacity: 0;
+
+	animation: 1s fade-in forwards;
+}
+
+@keyframes fade-in {
+	to{
+		opacity: 1;
+	}
+}
+
+.song-section #album-image{
+	width: 55%;
+	min-width: 300px;
+}
+
+.song-section #left-section{
+	grid-column: 1;
+
+	padding-top: 50px;
+
+	background-color: #FF9F43;
+	box-shadow: 7px 0px 19px -10px rgba(0,0,0,0.75);
+}
+.song-section #right-section{
+	grid-column: 2;
+
+	padding: 50px 70px 10px 70px;
+}
+
+.song-section #song-name{
+	font-size: 30px;
+	margin-bottom: 5px;
+	color: white;
+}
+.song-section #song-artists{
+	font-size: 22px;
+	color: #EDEDED;
+}
+.song-section #right-section #lyrics-wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+.song-section #right-section #lyrics-wrapper p{
+	margin-top: 0;
+}
+
+.song-section #song-lyrics{
+	font-size: clamp(14px, 1.3vw, 22px);
+	word-wrap: break-word; /* IE>=5.5 */
+	white-space: pre; /* IE>=6 */
+	white-space: -moz-pre-wrap; /* For Fx<=2 */
+	white-space: pre-wrap; /* Fx>3, Opera>8, Safari>3*/
+}
+
+@media (max-width: 920px), (max-device-width: 920px){
+	.song-section{
+		display: block;
+	}
+	.song-section #album-image{
+		width: 300px;
+	}
+	.song-section #left-section{
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		background-color: white;
+		box-shadow: none;
+	}
+	.song-section #song-name{
+		font-size: 30px;
+		margin-bottom: 5px;
+		color: black;
+	}
+	.song-section #song-artists{
+		font-size: 22px;
+		color: darkgrey;
+	}
+	.song-section #right-section{
+		padding: 20px 30px 10px 30px;
+	}
+}

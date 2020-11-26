@@ -1,0 +1,23 @@
+{% extends "_subpage-template.html" %}
+
+{% block styles %}
+	{{ super() }}
+	<link rel="stylesheet" href="/static/css/song-lyrics-page.css">
+{% endblock %}
+
+{% block page_content %}
+	<section class="big-section">
+		<section class="information-section">
+			<div class="loading-circle information-section-icon"></div>
+			<h2 class="information-text">Looking for your lyrics...</h2>
+		</section>
+	</section>
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+	<script src="/static/js/song-lyrics-page.js" type="text/javascript"></script>
+	<script type="text/javascript">getSongFromApi("{{ song_id }}")</script>
+{% endblock %}
+
+</html>

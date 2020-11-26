@@ -1,0 +1,69 @@
+#nav-bar{
+	display: block;
+
+	padding-top: 15px;
+	padding-bottom: 10px;
+
+	height: 50px;
+
+	background: #FF9F43;
+	box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.25);
+
+	text-align: left;
+	position: relative;
+}
+#nav-bar #nav-bar-logo{
+	position: absolute;
+	right: 30px;
+
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+
+	color: #F3F3F3;
+}
+#nav-bar form{
+	display: inline-block;
+	margin-left: 25px;
+	text-align: center;
+}
+
+#nav-bar #input-url{
+	display: inline-block;
+	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+	margin-right: 10px;
+}
+#nav-bar #wrong-input-message{
+	padding-top: 5px;
+}
+
+@media (max-width: 650px), (max-device-width: 650px){
+	#nav-bar{
+
+		height: 110px;
+
+		background: #FF9F43;
+		box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.25);
+
+		text-align: center;
+	}
+	#nav-bar #nav-bar-logo{
+		position: static;
+		display: inline-block;
+
+		width: 100%;
+
+		margin-bottom: 5px;
+		padding-top: 8px;
+
+		color: #F3F3F3;
+	}
+
+	#nav-bar form{
+		margin: 0;
+	}
+	#nav-bar #wrong-input-message{
+		padding-top: 5px;
+		display: block;
+	}
+}
